@@ -1,0 +1,66 @@
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+/*button's properties*/
+button {
+    width: 250px;
+    margin: 0 .5%
+    font-size: 200%;
+    color: gray;
+    background-color: purple;
+    border: 4px solid black;
+}
+
+/* cussor is over the button and changes appearance */
+button:hover {
+    background-color: rgb(42, 136, 165);
+    color: purple;
+}
+
+/* cussor is pressed down on the button which changes appearance */
+button:active {
+    background-color: rgb(107, 0, 132);
+    color: rgb(23, 226, 0);
+    font-size: 130%;
+    box-shadow: 0 0 10px rgb(4, 3, 52) inset;
+}
+
+/* button is selected */
+button:focus {
+    border-color: rgb(50, 6, 50)
+}
+
+
+.container {
+    display: flex;
+    gap: 1rem;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;}
+
+.box-1 {
+    background: aquamarine;
+    width: 50%;
+    height: 50%;
+}
+
+.box-2 {
+    background: blueviolet;
+}
+
+.box-3 {
+    background: rgb(165, 42, 104);
+}
+
+.box-4 {
+    background: green;
+}
+
