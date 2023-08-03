@@ -9,6 +9,12 @@
   <link rel="stylesheet" type="text/css" href="./assets/style.css">
 </head>
  
+
+<header>
+    <h1>DJ Poison</h1>
+    <p>Music Producer and Mixer</p> 
+</header>
+
 <body>
     <nav>
         <!-- these are the buttons on the top of the page -->
@@ -17,12 +23,85 @@
         <button>About</button>
         <button>Music</button>
     </nav>
- <section class="container">
+  <section class="container">
+    <div class="box box-0">hi</div>
+  </section>
+  <section class="container">
     <div class="box box-1">hi</div>
     <div class="box box-2"></div>
     <div class="box box-3"></div>
     <div class="box box-4"></div> 
-</section>
-</body>           
+</body> 
+
+<jumbotron>
+    <h1>DJ Poison</h1>
+    <p>Music Producer</p> 
+</jumbotron>
+
+
+<footer>
+    <p>© 2021 DJ Poison</p>
+    <h1>Pokédex</h1>
+    <input type="text" id="pokemonName" placeholder="Enter Pokémon name or ID">
+    <button onclick="getPokemonData()">Search</button>
+    <div id="pokemonInfo">
+      <!-- Pokémon data will be displayed here -->
+    </div>
+</footer>
+
+<script src="./assets/script.js"></script>
 
 </html>
+
+
+
+<!-- 
+<body>
+    <script>
+      function getPokemonData() {
+        const pokemonName = document.getElementById('pokemonName').value.toLowerCase();
+        const apiUrl = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
+  
+        fetch(apiUrl)
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Pokémon not found!');
+            }
+            return response.json();
+          })
+          .then(data => {
+            displayPokemonData(data);
+          })
+          .catch(error => {
+            console.error('Error fetching data:', error);
+            document.getElementById('pokemonInfo').innerHTML = 'Pokémon not found!';
+          });
+      }
+  
+      function displayPokemonData(data) {
+        const pokemonInfoDiv = document.getElementById('pokemonInfo');
+        const pokemonName = data.name.toUpperCase();
+        const pokemonID = data.id;
+        const pokemonTypes = data.types.map(type => type.type.name).join(', ');
+        const pokemonAbility = data.abilities[0].ability.name;
+        const pokemonPictureUrl = data.sprites.front_default;
+  
+        const infoHTML = `
+          <h2>${pokemonName}</h2>
+          <p>ID: ${pokemonID}</p>
+          <p>Type: ${pokemonTypes}</p>
+          <p>Ability: ${pokemonAbility}</p>
+          <img src="${pokemonPictureUrl}" alt="${pokemonName} Picture">
+        `;
+  
+        pokemonInfoDiv.innerHTML = infoHTML;
+      }
+    </script>
+  </body>
+
+
+  </html>
+
+                     
+
+ -->
